@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Book an Appointment</h1>
+    </header>
+
+    <section class="appointment-form">
+        <form id="appointment-form">
+            <input type="hidden" id="service" value="">
+
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" required>
+            <span id="name-error"></span>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" required>
+            <span id="email-error"></span>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" required>
+            <span id="phone-error"></span>
+
+            <label for="date-time">Preferred Date & Time:</label>
+            <input type="datetime-local" id="date-time" required>
+            <span id="date-time-error"></span>
+
+            <label for="special-requests">Special Requests:</label>
+            <textarea id="special-requests"></textarea>
+
+            <label>
+                <input type="checkbox" id="terms" required> Agree to Terms and Conditions
+            </label>
+            <span id="terms-error"></span>
+
+            <button type="submit" id="submit-btn">Submit</button>
+        </form>
+    </section>
+
+    <div id="thank-you-message" class="thank-you" style="display:none;">
+        <h2>Thank You for Booking!</h2>
+        <p>Your appointment has been confirmed. We look forward to serving you.</p>
+        <button onclick="window.location.href='appointments.html'">View Appointments</button>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>
